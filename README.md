@@ -69,8 +69,8 @@ For each step A–H: what it's for, and what information gets lost by doing it.
 
 ## Part 3 – Clustering code (Kohonen WTA or FCAN)
 
-**Who:** Name TBD
-**Status:** Not started
+**Who:** Benjamin
+**Status:** Done
 
 Run the clustering algorithm on the TDM to group similar paragraphs.
 
@@ -78,8 +78,8 @@ Run the clustering algorithm on the TDM to group similar paragraphs.
 
 ## Part 3a – How many clusters/topics (2 pts)
 
-**Who:** Name TBD
-**Status:** Not started
+**Who:** Benjamin
+**Status:** Done
 
 ---
 
