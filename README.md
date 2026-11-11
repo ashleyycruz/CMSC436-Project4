@@ -74,7 +74,7 @@ For each step A–H: what it's for, and what information gets lost by doing it.
 **Code:** `cluster.py` (needs numpy to run)
 
 Run the clustering algorithm on the TDM to group similar paragraphs.
-Groups the 52 paragraphs using Kohonen Winner-Take-All: each cluster has a prototype, and only the closest one moves toward each paragraph.
+Groups the 52 paragraphs using Kohonen Winner-Take-All. Each cluster has a prototype and only the closest one moves toward each paragraph.
 
 Results:
 
