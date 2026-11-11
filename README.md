@@ -71,15 +71,28 @@ For each step A–H: what it's for, and what information gets lost by doing it.
 
 **Who:** Benjamin
 **Status:** Done
+**Code:** `cluster.py` (needs numpy to run)
 
 Run the clustering algorithm on the TDM to group similar paragraphs.
+Groups the 52 paragraphs using Kohonen Winner-Take-All: each cluster has a prototype, and only the closest one moves toward each paragraph.
 
+Results:
+
+- 2 clusters: 31 paragraphs and 21 paragraphs
+- Assignments saved to `cluster_assignments.csv`
+  
 ---
 
 ## Part 3a – How many clusters/topics (2 pts)
 
 **Who:** Benjamin
 **Status:** Done
+**Code:** `cluster.py`
+
+Tried k = 2 to 6 and checked which k gives the same clusters across 10 random starts.
+
+Answer: **2 clusters.** It is the most stable and extra clusters are mostly way smaller like 1 to 3 paragraphs. The two clusters overlap a fair bit as well.
+
 
 ---
 
