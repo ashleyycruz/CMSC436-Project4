@@ -5,7 +5,8 @@ We turn 52 movie reviews into numbers and then group similar reviews together.
 ## How to run
 
 ```bash
-python3 feature_vector.py
+python3 feature_vector.py    # Part 1 only: prints the feature vector
+python3 tdm_matrix.py        # Parts 1 + 2: also builds the TDM
 ```
 
 ## Folder layout
@@ -13,6 +14,7 @@ python3 feature_vector.py
 ```
 data/                      the paragraphs + stop words given by the class
 feature_vector.py          Part 1: cleans the text and builds the feature vector
+tdm_matrix.py              Part 2: Builds the term document matrix
 porter_stemmer.py          the class's Porter stemmer (algorithm unchanged)
 ```
 
@@ -39,9 +41,20 @@ Results (T = 10):
 ## Part 2a – Term Document Matrix (3 pts)
 
 **Who:** Bella
-**Status:** In Progress
+**Status:** Done
+**Code:** `tdm_matrix.py`
 
 Build the TDM: 52 rows (paragraphs) × 161 columns (feature words). Each cell = how many times that word appears in that paragraph. Reuse `main()` from `feature_vector.py`.
+
+Results:
+   - Matrix dimensions: 52 paragraphs x 161 features
+   - Full matrix saved to `tdm.csv`
+
+**For Part 3:**
+`from tdm_matrix import main as run_part2`, then
+`paragraphs, stemmed, per_paragraph, feature_vector, matrix = run_part2()`
+- `matrix` is a list of 52 lists, each with 161 counts
+- rows = paragraphs, columns = features in `feature_vector` order.
 
 ---
 
