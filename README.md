@@ -61,9 +61,41 @@ Results:
 ## Part 2b – Explain steps A–H (2 pts)
 
 **Who:** Bella
-**Status:** In Progress
+**Status:** Done
 
-For each step A–H: what it's for, and what information gets lost by doing it.
+"*For each of the text mining steps (A to H), explain the purpose of each step and what sort of information is lost while applying each of those text-mining steps.*"
+
+**A) Tokenize paragraphs**
+- **Purpose**: Divides the document into individual paragraphs to be analyzed using features extracted from them.
+- **Information Lost**: Tokenizing paragraphs as opposed to individual sentences sacrifices specificity. A single paragraph can contain a lot of varying ideas and topics, making it harder to distinguish between them.
+
+**B) Remove punctuation and special characters** 
+- **Purpose**: Cleans the text and reduce unnecessary features by removing symbols that are generally not useful for identifying the topics of a document
+- **Information Lost**: Removes the potential insight punctuation can provide insight on the tone and intent of a text, for example exclamations may indicate excitement or emphasis.
+
+**C) Remove numbers**
+- **Purpose:** Cleans the text and reduces unnecessary features by removing numerical values under the assumption that they don’t contribute to identifying the main topics. 
+- I**Information lost**: Removes the potential context and meaning numerical information, such as dates, statistics, and measurements could provide 
+
+**D) Convert upper-case to lower-case**
+- **Purpose**:  Reduces unnecessary distinctions through standardizing the text so that words with different capitalization are treated as the same feature.  
+- **Information lost**: Removes any distinctions between proper nouns and generic nouns, for example "Apple" vs "apple". 
+
+**E) Remove stop words**
+- **Purpose**: Removes frequently occurring structural words, allowing more meaningful words to stand out.
+- I**nformation los**t: Removing stop words can sacrifice grammatical structure  and contextual meaning. These words can also sometimes influence the meaning or relationships between other words.
+
+**F) Perform stemming.**
+- **Purpose**: Reduces the dimensionality of the dataset by reducing words to a common root, treating different variations of a word as a single feature (e.g., "eating," "eats," and "eaten" become "eat"). 
+- **Information lost**: Removes distinctions between different word forms, including tense and grammatical context. It can also produce truncated roots that are not standard words, such as "artifici" from "artificial," or roots that provide little meaning on their own.
+
+**G) Extract the frequency of the words for each paragraph** 
+- **Purpose**: Counts how often each word appears in each paragraph and uses a  frequency threshold to determine which words are kept as features.
+- **Information lost**: Assumes rarely occurring terms are less important, even though sometimes unique, uncommon words carry significant meaning. The accuracy of this step depends on the selected frequency threshold. A threshold that's too low makes it difficult to distinguish between topics, while a threshold that's too high won’t produce enough information to identify topics
+
+**H) Provide the feature vector**
+- **Purpose**: Provides the list of extracted words (features) that form the column headers of the Term Document Matrix. Each feature represents a dimension used to describe the paragraphs.
+- **Information lost**: Only the words selected for the feature vector are represented in the TDM. Words excluded during the pre-processing steps above are no longer available for analysis. Additonally, the original word order, and the relationships between words is not preserved
 
 ---
 
