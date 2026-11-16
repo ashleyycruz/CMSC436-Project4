@@ -130,21 +130,27 @@ Answer: **2 clusters.** It is the most stable and extra clusters are mostly way 
 
 ## Part 3b – TDM dimensionality (2 pts)
 
-**Who:** Name TBD
-**Status:** Not started
+**Who:** Way Htoo
+**Status:** Done
 
 What drives the size of the TDM, and how to reduce it.
 
----
+The dimensionality of the TDM depends on the number of unique words in the feature vector. Our TDM has 52 rows and 161 columns, representing 52 paragraphs and 161 features. We can reduce dimensionality by removing stop words, punctuation, and numbers, using stemming, and increasing the frequency threshold. Our project uses a threshold of T = 10, which reduces the feature vector to 161 words. This makes the TDM smaller and easier to process.
 
 ## Part 3c – Results (2 pts)
 
-**Who:** Name TBD
-**Status:** Not started
+**Who:** Way Htoo
+**Status:** Done
 
 Show the clusters and comment on what each one is about.
 
----
+We used the Kohonen Winner-Take-All (WTA) algorithm to group 52 reviews based on their word frequencies. The algorithm identified 2 clusters:
+
+Cluster 1: 31 paragraphs (59.6%). This group contains a mix of reviews discussing acting, characters, entertainment, and story quality.
+
+Cluster 2: 21 paragraphs (40.4%). This group also discusses movies but includes several reviews focusing on filmmaking, directing, adaptations, and storytelling.
+
+The results show that the algorithm grouped reviews based on similar word patterns. However, the clusters overlap because many reviews discuss similar topics. This means the algorithm found differences in word usage, but the groups do not represent completely separate movie genres.
 
 ## Report + submission
 
